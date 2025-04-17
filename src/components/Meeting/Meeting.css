@@ -1,0 +1,73 @@
+/* Container for the whole form */
+.meeting-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Form styling */
+  .meeting-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for each input and textarea */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .form-field textarea {
+    resize: vertical;
+  }
+  
+  /* Submit button styling */
+  .form-submit {
+    text-align: center;
+  }
+  
+  .form-submit button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-submit button:hover {
+    background-color: #45a049;
+  }
+  

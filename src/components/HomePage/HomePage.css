@@ -1,0 +1,311 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #a0aec0;
+}
+
+/* Mentor Section Layout */
+.mentor-section {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mentor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Ensure both image and text take up half the space */
+.mentor-image {
+    flex: 1;
+    min-width: 50%;  /* Ensures it takes half the width */
+    height: 300px;
+    width:80%;
+    background-image: url('https://img.freepik.com/free-vector/coach-speaking-before-audience-mentor-presenting-charts-reports-employees-meeting-business-training-seminar-conference-vector-illustration-presentation-lecture-education_74855-8294.jpg?t=st=1744892124~exp=1744895724~hmac=8145165208937cc658cf189582ea71918b935b1d3a6d8a80ce4cf49787fad8f1&w=1380');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Text will take the other half */
+.mentor-text {
+    flex: 1;
+    min-width: 50%;  /* Ensures it takes half the width */
+    text-align: left;
+}
+
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+}
+
+.mentor-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.mentor-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Bottom: Mentor Cards */
+.mentor-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.mentor-card {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #f8fafc;
+}
+
+.mentor-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.mentor-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.mentor-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .mentor-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mentor-text {
+        max-width: 100%;
+    }
+
+    .mentor-cards-container {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .mentor-card {
+        width: 100%;
+    }
+
+    .mentor-image {
+        width: 90%;
+        height: 250px;
+    }
+}
+.cta-section {
+    
+    background-color: #c7cacd;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+
+    margin-top: 3rem;
+}
+.cta-section p{
+    padding: 22px;
+}
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #565a56;
+}
+.testimonials-section {
+    padding: 3rem 2rem;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+}
+.contact-section {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-button {
+    padding: 1rem;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+.footer .social-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer .social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #a0aec0;
+}
