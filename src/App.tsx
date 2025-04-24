@@ -6,6 +6,7 @@ import SignUp from './components/SignUp/SignUp';
 import Dashboard from './components/Dashboard/Dashboard';
 import HomePage from './components/HomePage/HomePage';
 import Meeting from './components/Meeting/Meeting';
+import PostPage from './components/Post/PostPage';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,8 @@ const App: React.FC = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/meeting" element={<Meeting />} />
+        <Route path="/PostPage" element={<PostPage />} />
+        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );

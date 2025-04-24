@@ -10,12 +10,9 @@ const SignIn: React.FC = () => {
     const navigate = useNavigate(); // Initialize useNavigate
     const role = (location.state as { role?: string })?.role || 'User';
 
-    // Corrected to use 'email' instead of 'username'
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Add your authentication logic here
-        // Example: Check if credentials are correct, if yes, redirect to dashboard
-        if (email === 'user@example.com' && password === 'password') { // Replace with your real authentication logic
+        if (email === 'user@example.com' && password === 'password') {
             navigate('/dashboard');
         } else {
             alert('Invalid credentials');
