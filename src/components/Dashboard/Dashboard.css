@@ -45,7 +45,7 @@
   .dashboard-content {
     flex: 1;
     padding: 30px;
-    background-color: #f5f6fa;
+    background-color: #e3cdcd;
   }
   
   .dashboard-content h2 {
@@ -265,7 +265,6 @@
 /* How It Works */
 .how-it-works-section {
   padding: 60px 20px;
-  background-color: #f9f9f9;
   text-align: center;
 }
 
@@ -303,7 +302,7 @@
 }
 
 /* FAQ */
-.faq-section {
+/* .faq-section {
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
@@ -315,7 +314,47 @@
   padding: 20px;
   border-radius: 10px;
   border-left: 4px solid #007bff;
+} */
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 60px 20px;
+  background-color: #e3cdcd;
 }
+
+.faq-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item h4 {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
 
 /* Newsletter */
 .newsletter-section {
@@ -349,7 +388,7 @@
 /* Partners */
 .partners-section {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: #e3cdcd;
   text-align: center;
 }
 

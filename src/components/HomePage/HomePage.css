@@ -76,10 +76,9 @@ body {
     position: relative;
 }
 
-/* Text will take the other half */
 .mentor-text {
     flex: 1;
-    min-width: 50%;  /* Ensures it takes half the width */
+    min-width: 50%;  
     text-align: left;
 }
 

@@ -14,6 +14,14 @@ const PostPage = () => {
         );
     };
 
+
+
+    interface ModalData {
+        title: string;
+        imageUrl: string;
+        snippet: string;
+    }
+    const [modalData, setModalData] = useState<{ title: string, snippet: string, imageUrl: string, fullContent: string } | null>(null);
     const imageUrls = [
         "https://img.freepik.com/free-vector/hand-drawn-flat-design-affiliate-marketing-illustration_23-2149347413.jpg?t=st=1745402635~exp=1745406235~hmac=6ff800c36b2572e0e277cf6bda9ce25fbafa8bae9e74c297b4047609692fd8cc&w=1380",
         "https://img.freepik.com/free-vector/online-job-interview-concept_23-2148628159.jpg?t=st=1745402888~exp=1745406488~hmac=29837287b27e00629a1f53267ddd8b34dff391667e64d16ef5653ef99013df5d&w=1380",
@@ -36,12 +44,21 @@ const PostPage = () => {
     ];
 
 
+
+
     const posts = Array.from({ length: 18 }, (_, index) => ({
         id: index,
         title: `Post Title ${index + 1}`,
         snippet: `This is a short snippet for post ${index + 1}.`,
-        imageUrl: imageUrls[index],
+        fullContent: `This is the full content for post ${index + 1}.`, 
     }));
+    const openModal = (post: { title: string, snippet: string, fullContent: string }) => {
+        setModalData(post);
+      };
+
+    const closeModal = () => {
+        setModalData(null);
+    };
 
     return (
         <div className="post-page">
@@ -74,10 +91,22 @@ const PostPage = () => {
                             </button>
                             <button className="share-btn">Share</button>
                         </div>
-                        <button className="read-more">Read More</button>
+                        <button className="read-more" onClick={() => openModal(post)}>Read More</button>
                     </div>
                 ))}
             </div>
+
+            {/* Modal */}
+            {modalData && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <h2>{modalData.title}</h2>
+                        <img src={modalData.imageUrl} alt={modalData.title} />
+                        <p>{modalData.fullContent}</p> {/* Full content of the post */}
+                        <button className="close-modal" onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
             <footer className="post-footer">© 2025 My Blog</footer>
         </div>
     );
