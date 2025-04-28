@@ -27,7 +27,7 @@ const SelectRoleCard: React.FC<Props> = ({ onNext }) => {
   };
 
   return (
-    <div className="container">
+    <div className="containerr">
     <div className="left-section">
         <h1 className="welcome-text">Welcome to Mentoring System</h1>
         <img

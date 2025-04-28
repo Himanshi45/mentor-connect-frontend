@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./Chat.css";
+import "./chat.css";
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([

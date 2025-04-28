@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; 
 import './SignIn.css';
 
 const SignIn: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [role, setRole] = useState<'student' | 'mentor' | 'admin'>('student');
     const location = useLocation();
-    const navigate = useNavigate(); // Initialize useNavigate
-    const role = (location.state as { role?: string })?.role || 'User';
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (email === 'user@example.com' && password === 'password') {
-            navigate('/dashboard');
+        
+        // Add your role-based logic here
+        if (email === 'student@example.com' && password === 'password' && role === 'student') {
+            navigate('/dashboard'); // Navigate to student dashboard
+        } else if (email === 'mentor@example.com' && password === 'password' && role === 'mentor') {
+            navigate('/dashboard'); // Navigate to mentor dashboard
+        } else if (email === 'admin@example.com' && password === 'password' && role === 'admin') {
+            navigate('/dashboard'); // Navigate to admin dashboard
         } else {
             alert('Invalid credentials');
         }
@@ -66,6 +72,21 @@ const SignIn: React.FC = () => {
                                 </p>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Role Selection */}
+                    <div className="form-group">
+                        <label htmlFor="role">Select your role</label>
+                        <select
+                            id="role"
+                            value={role}
+                            onChange={(e) => setRole(e.target.value as 'student' | 'mentor' | 'admin')}
+                            required
+                        >
+                            <option value="student">Student</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </div>
 
                     <button

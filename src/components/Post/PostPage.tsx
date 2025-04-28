@@ -50,11 +50,12 @@ const PostPage = () => {
         id: index,
         title: `Post Title ${index + 1}`,
         snippet: `This is a short snippet for post ${index + 1}.`,
-        fullContent: `This is the full content for post ${index + 1}.`, 
+        fullContent: `This is the full content for post ${index + 1}.`,
+        imageUrl: imageUrls[index % imageUrls.length], // Add the imageUrl property
     }));
-    const openModal = (post: { title: string, snippet: string, fullContent: string }) => {
+    const openModal = (post: { title: string, snippet: string, fullContent: string, imageUrl: string }) => {
         setModalData(post);
-      };
+    };
 
     const closeModal = () => {
         setModalData(null);

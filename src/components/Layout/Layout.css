@@ -36,7 +36,6 @@
   
   .layout-content {
     flex-grow: 1;
-    padding: 40px;
     background: #f3f4f6;
     overflow-y: auto;
   }
