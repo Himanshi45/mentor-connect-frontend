@@ -18,15 +18,9 @@ const Homepage: React.FC = () => {
             <section className="mentor-section">
                 {/* Image on the left and text on the right */}
                 <div className="mentor-header">
-                    <div className="md:w-1/2 top-[-120px] sm:top-[-100px] lg:top-[-100px] xl:top-[-160px]"><video
-                        src=""
-                        className="w-full h-auto object-cover"
-                        autoPlay
-                        playsInline
-                        loop={true}
-                    >
-                        Your browser does not support the video tag.
-                    </video></div>
+                    <div className="mentor-image">
+                        <div className="image-overlay"></div>
+                    </div>
                     <div className="mentor-text">
                         <h2 className="mentor-title">Our Mentors are Here to Help You Grow</h2>
                         <p className="mentor-subtitle">

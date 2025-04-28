@@ -1,0 +1,43 @@
+/* components/Layout/Layout.css */
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: #111827;
+    color: #fff;
+    padding: 30px 20px;
+  }
+  
+  .sidebar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+  }
+  
+  .sidebar nav ul li:hover {
+    color: #3b82f6;
+  }
+  
+  .layout-content {
+    flex-grow: 1;
+    padding: 40px;
+    background: #f3f4f6;
+    overflow-y: auto;
+  }
+  
